@@ -1,0 +1,11 @@
+{%extends "layout.njk"%}
+{% import "parts/section-products.njk" as section %}
+{%block head%}
+<title>listando Produto</title>
+{%endblock head %}
+
+{%block content %}
+
+{{section.products('Ùltimos Produtos', 'container', products)}}
+
+{%endblock content %}

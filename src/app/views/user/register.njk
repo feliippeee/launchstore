@@ -1,0 +1,25 @@
+{%extends "layout.njk"%}
+{%import "parts/card.njk" as card %}
+
+{%block head%} 
+
+<title>Registre-se</title>
+
+{%endblock%}
+
+
+{%block content %}
+{%call card.render('Registre-se', 'user-register container')%}
+
+    <form class="card" method="POST" action="/users/register">
+
+        <div class="fields">
+            {% include ('user/fields.njk') %}
+        </div>
+
+            <button class="button" type="submit">Salvar</button>    
+           
+        </form>
+{%endcall%}
+
+{%endblock%}
